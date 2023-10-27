@@ -1,6 +1,4 @@
 // clickIfPresent(document.querySelector("#donotcache"));
-
-let flag = true;
 chrome.storage.sync.get(["id"], function(result) {
     if (result.id === undefined) {
         alert("cannot get id")
