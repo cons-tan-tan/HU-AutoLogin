@@ -1,6 +1,6 @@
 # HU-AutoLogin
 
-広大IDでのログインを自動化する拡張機能（非公式）です。
+広大IDでのログインを自動化するChrome拡張機能（非公式）です。
 
 [Myもみじ](https://www.momiji.hiroshima-u.ac.jp/campusweb),
 [moodle](https://moodle.vle.hiroshima-u.ac.jp/my/)
