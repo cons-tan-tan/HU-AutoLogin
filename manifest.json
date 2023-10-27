@@ -25,7 +25,7 @@
       "matches": ["https://idp.hiroshima-u.ac.jp/mfa/MFAuth.php*"],
       "js": [
         "src/js/ElementLib.js",
-        "dist/Totp.js"
+        "browserified/Totp.js"
       ]
     }
   ],
