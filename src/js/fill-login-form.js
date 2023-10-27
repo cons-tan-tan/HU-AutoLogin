@@ -1,13 +1,13 @@
 clickIfPresent(document.querySelector("#donotcache"));
 chrome.storage.sync.get(["id"], function(result) {
-    if (result.id === undefined) {
-        alert("cannot get id")
+    if (result.id === undefined || result.id === "") {
+        alert("広大IDが設定されていません");
     } else {
         fillIfPresent(document.querySelector("#username"), result.id);
 
         chrome.storage.sync.get(["password"], function(result) {
-            if (result.password === undefined) {
-                alert("cannot get password")
+            if (result.password === undefined || result.password === "") {
+                alert("パスワードが設定されていません");
             } else {
                 fillIfPresent(document.querySelector("#password"), result.password);
 
