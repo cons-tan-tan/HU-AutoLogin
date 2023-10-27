@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Autologin for Hiroshima Univ.",
+  "name": "HU-AutoLogin",
   "version": "1.0",
   "description": "MyもみじとMoodleのログインを自動化します。非公式です。",
   "action": {
