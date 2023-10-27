@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "totp-generator": "^0.0.14"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.248"
+  }
+}

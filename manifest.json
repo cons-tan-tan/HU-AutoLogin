@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Autologin for Hiroshima Univ.",
+  "version": "1.0",
+  "description": "MyもみじとMoodleのログインを自動化します。非公式です。",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://moodle.vle.hiroshima-u.ac.jp/local/hulogin/*"],
+      "js": [
+        "src/js/ElementLib.js",
+        "src/js/ClickLoginButton.js"
+      ]
+    },
+    {
+      "matches": ["https://idp.hiroshima-u.ac.jp/idp/profile/SAML2/Redirect/SSO*"],
+      "js": [
+        "src/js/ElementLib.js",
+        "src/js/FillLoginForm.js"
+      ]
+    },
+    {
+      "matches": ["https://idp.hiroshima-u.ac.jp/mfa/MFAuth.php*"],
+      "js": [
+        "src/js/ElementLib.js",
+        "dist/Totp.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
