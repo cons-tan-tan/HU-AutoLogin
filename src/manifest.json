@@ -10,21 +10,21 @@
     {
       "matches": ["https://moodle.vle.hiroshima-u.ac.jp/local/hulogin/*"],
       "js": [
-        "js/element-lib.js",
+        "js/lib.js",
         "js/click-login-button.js"
       ]
     },
     {
       "matches": ["https://idp.hiroshima-u.ac.jp/idp/profile/SAML2/Redirect/SSO*"],
       "js": [
-        "js/element-lib.js",
+        "js/lib.js",
         "js/fill-login-form.js"
       ]
     },
     {
       "matches": ["https://idp.hiroshima-u.ac.jp/mfa/MFAuth.php*"],
       "js": [
-        "js/element-lib.js",
+        "js/lib.js",
         "js/browserified/totp.js"
       ]
     }
