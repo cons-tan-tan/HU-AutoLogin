@@ -1,28 +1,30 @@
 function setSyncData() {
-    const id = document.getElementById("id").value;
-    if (id !== "") {
-        chrome.storage.sync.set({"id": id});
-    }
-    const password = document.getElementById("password").value
-    if (password !== "") {
-        chrome.storage.sync.set({"password": password});
-    }
-    let url = document.getElementById("url").value;
-    if (url !== "") {
-        chrome.storage.sync.set({"url": url});
-    }
+    chrome.storage.sync.set({"id": document.getElementById("id").value}, function() {
+        chrome.storage.sync.set({"password": document.getElementById("password").value}, function() {
+            chrome.storage.sync.set({"url": document.getElementById("url").value}, function() {
+                alert("保存しました");
+            });
+        });
+    });
 }
 
 document.addEventListener("DOMContentLoaded", function() {
     chrome.storage.sync.get(["id"], function(result) {
-        document.getElementById("id").value = result.id;
+        if (result.id != null) {
+            document.getElementById("id").value = result.id;
+        }
     });
     chrome.storage.sync.get(["password"], function(result) {
-        document.getElementById("password").value = result.password;
+        if (result.password != null) {
+            document.getElementById("password").value = result.password;
+        }
     });
     chrome.storage.sync.get(["url"], function(result) {
-        document.getElementById("url").value = result.url;
+        if (result.url != null) {
+            document.getElementById("url").value = result.url;
+        }
     });
+
     document.getElementById("save").addEventListener("click", function() {
         setSyncData();
     });
