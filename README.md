@@ -9,3 +9,7 @@
 [多要素認証](https://www.media.hiroshima-u.ac.jp/services/mfa/mfa4hirodaiid/)
 はTOTP(ワンタイムパスワード)のみ対応しています。
 
+## インストール
+
+[Chrome Web Store](https://chrome.google.com/webstore/detail/hu-autologin/fbbbocmkcnbhidjmkjbcdfmnmindanaa)
+からインストールできます。
