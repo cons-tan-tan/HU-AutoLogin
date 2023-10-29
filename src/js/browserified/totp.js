@@ -89,7 +89,7 @@ function leftpad(str, len, pad) {
 },{"jssha":1}],3:[function(require,module,exports){
 const generateToken = require('totp-generator');
 
-selectIfPresent(document.querySelector("#MFALogin > table > tbody > tr:nth-child(1) > td:nth-child(3) > select"), "totp")
+selectIfPresent(document.querySelector("#MFALogin > table > tbody > tr:nth-child(1) > td:nth-child(3) > select"), "totp");
 
 chrome.storage.sync.get(["url"], function(result) {
     if (result.url !== undefined && result.url !== "") {
